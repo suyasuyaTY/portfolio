@@ -1,6 +1,5 @@
 import React from "react";
 import { Avatar, Box, Grid, Typography } from "@mui/material";
-import { Padding } from "@mui/icons-material";
 
 type Props = {
   title: string;
@@ -9,16 +8,27 @@ type Props = {
 
 function ProfileDetails(props: Props) {
   return (
-    <Box>
-      <Typography
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box
+        component="div"
         sx={{
-          fontSize: "1.2rem",
-          fontWeight: "bold",
+          width: {
+            xs: "12rem",
+            sm: "100%",
+          },
+          marginY: 1,
         }}
       >
-        {props.title}
-      </Typography>
-      <Typography>{props.descriptions}</Typography>
+        <Typography
+          sx={{
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+          }}
+        >
+          {props.title}
+        </Typography>
+        <Typography>{props.descriptions}</Typography>
+      </Box>
     </Box>
   );
 }
@@ -26,7 +36,7 @@ function ProfileDetails(props: Props) {
 export default function Profile() {
   const profileDetails: Props[] = [
     { title: "名前", descriptions: "suyasuya_TY" },
-    { title: "所属", descriptions: "東京工業大学工学院情報通信系" },
+    { title: "所属", descriptions: "東京工業大学 情報通信系" },
     { title: "サークル", descriptions: "TitechAppProject" },
   ];
 
@@ -44,22 +54,17 @@ export default function Profile() {
     <Box
       component="main"
       sx={{
-        marginTop: 1,
-        marginX: {
-          xs: 10,
-          sm: 0,
-        },
+        marginTop: "2em",
       }}
     >
-      <Grid container spacing={{ xs: 0, sm: 2 }} columns={{ xs: 6, sm: 12 }}>
+      <Grid container justifyContent="space-around">
         <Grid item xs={0} sm={1} />
         <Grid
           item
-          xs={6}
+          xs={12}
           sm={3}
           sx={{
-            margin: "16px",
-            padding: "16px",
+            padding: "1em",
             display: "flex",
             justifyContent: "center",
           }}
@@ -73,14 +78,13 @@ export default function Profile() {
         <Grid item xs={0} sm={1} />
         <Grid
           item
-          xs={6}
-          sm={5}
+          xs={12}
+          sm={6}
           sx={{
-            margin: {
-              xs: "0px",
-              sm: "16px",
+            xs: {
+              display: "flex",
+              flexFlow: "column",
             },
-            padding: "0px",
           }}
         >
           {profileSections}
