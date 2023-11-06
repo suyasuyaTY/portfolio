@@ -1,12 +1,12 @@
 import React from "react";
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 
-type Props = {
+type profileDetailsProps = {
   title: string;
   descriptions: string;
 };
 
-function ProfileDetails(props: Props) {
+function ProfileDetails(props: profileDetailsProps) {
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
       <Box
@@ -34,7 +34,7 @@ function ProfileDetails(props: Props) {
 }
 
 export default function Profile() {
-  const profileDetails: Props[] = [
+  const profileDetails: profileDetailsProps[] = [
     { title: "名前", descriptions: "suyasuya_TY" },
     { title: "所属", descriptions: "東京工業大学 情報通信系" },
     { title: "サークル", descriptions: "TitechAppProject" },
@@ -54,7 +54,7 @@ export default function Profile() {
     <Box
       component="main"
       sx={{
-        marginTop: "2em",
+        marginTop: "64px",
       }}
     >
       <Grid container justifyContent="space-around">

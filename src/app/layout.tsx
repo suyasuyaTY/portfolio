@@ -1,3 +1,5 @@
+import React from "react";
+import Hedder from "@/component/hedder/hedder";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +17,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.jpg" />
       </head>
-      <body>{children}</body>
+      <body>
+        <Hedder />
+        {children}
+      </body>
     </html>
   );
 }
