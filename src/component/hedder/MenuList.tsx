@@ -1,10 +1,15 @@
 "use client";
 import React, { useState, useRef } from "react";
+import Link from "next/link";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
 
 type menuListProps = {
-  navItems: string[];
+  navItems: {
+    name: string;
+    url: string;
+  }[];
 };
 
 export default function MenuList(props: menuListProps) {
@@ -47,10 +52,12 @@ export default function MenuList(props: menuListProps) {
           onClose={handleCloseMenuList}
           sx={{ display: { xs: "block", md: "none" } }}
         >
-          {props.navItems.map((item) => (
-            <MenuItem key={item} onClick={handleCloseMenuList}>
-              <Typography textAlign="center">{item}</Typography>
-            </MenuItem>
+          {props.navItems.map((item, index) => (
+            <Link href={item.url} key={index}>
+              <MenuItem onClick={handleCloseMenuList}>
+                <Typography textAlign="center">{item.name}</Typography>
+              </MenuItem>
+            </Link>
           ))}
         </Menu>
       </Box>
@@ -61,10 +68,10 @@ export default function MenuList(props: menuListProps) {
           justifyContent: "space-around",
         }}
       >
-        {props.navItems.map((item) => (
-          <Typography key={item} sx={{ maginX: 5 }}>
-            {item}
-          </Typography>
+        {props.navItems.map((item, index) => (
+          <Link href={item.url} key={index}>
+            <Typography sx={{ maginX: 5 }}>{item.name}</Typography>
+          </Link>
         ))}
       </Box>
     </>

@@ -2,12 +2,25 @@ import React from "react";
 import { AppBar, Box, Toolbar, Button, Avatar } from "@mui/material";
 import MenuList from "@/component/hedder/MenuList";
 
+type navItem = {
+  name: string;
+  url: string;
+};
+
 export default function Hedder() {
-  const navItems: string[] = [
-    "ホーム",
-    "プロフィール",
-    "作ったもの",
-    "書いたもの",
+  const navItems: navItem[] = [
+    {
+      name: "ホーム",
+      url: "/",
+    },
+    {
+      name: "作ったもの",
+      url: "/Working",
+    },
+    {
+      name: "書いたもの",
+      url: "/Articles",
+    },
   ];
 
   return (
