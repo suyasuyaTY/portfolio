@@ -39,6 +39,7 @@ function DisplayIconAndName() {
       <Box
         sx={{
           marginX: "2rem",
+          marginY: "auto",
         }}
       >
         <Typography

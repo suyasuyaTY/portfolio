@@ -1,30 +1,20 @@
-import React from "react";
+import React, { createElement, Fragment } from "react";
 import { Box, Typography } from "@mui/material";
-import Title from "../../common/Title/Title";
 import { ProfileInfo } from "@/component/common/Profile/ProfileInfo";
+import { markdownToReact } from "@/component/libs/markdown-to-react";
+import path from "path";
+import process from "process";
+import fs from "fs";
 
-type profileDetailsProps = {
-  title: string;
-  descriptions: string;
-};
+export default async function Profile() {
+  const readmeFullPath = path.join(
+    process.cwd(),
+    "src/component/posts/readme",
+    "README.md"
+  );
+  const mdContent = fs.readFileSync(readmeFullPath, "utf8");
 
-export default function Profile() {
-  const profileDetails: profileDetailsProps[] = [
-    { title: "名前", descriptions: "suyasuya_TY" },
-    { title: "所属", descriptions: "東京工業大学 情報通信系" },
-    { title: "サークル", descriptions: "TitechAppProject" },
-  ];
-
-  const profileSections = profileDetails.map((detail, index) => {
-    return (
-      <ProfileDetails
-        title={detail.title}
-        descriptions={detail.descriptions}
-        key={index}
-      />
-    );
-  });
-
+  const reactContent = await markdownToReact(mdContent);
   return (
     <Box
       component="main"
@@ -44,23 +34,7 @@ export default function Profile() {
       }}
     >
       <ProfileInfo />
-      <Box sx={{ margin: "2rem" }}>{profileSections}</Box>
-    </Box>
-  );
-}
-
-function ProfileDetails(props: profileDetailsProps) {
-  return (
-    <Box>
-      <Box
-        component="div"
-        sx={{
-          marginY: 1,
-        }}
-      >
-        <Title>{props.title}</Title>
-        <Typography>{props.descriptions}</Typography>
-      </Box>
+      <Box sx={{ marginX: "2rem" }}>{reactContent}</Box>
     </Box>
   );
 }
