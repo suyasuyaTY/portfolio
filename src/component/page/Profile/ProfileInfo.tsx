@@ -1,6 +1,6 @@
 import { Typography, Box, Avatar } from "@mui/material";
-import { links } from "@/component/const";
-import { LinkInfo } from "@/component/common/Link/Link";
+import { links } from "@/const/links";
+import { LinkInfo } from "@/component/ui/Link";
 
 export function ProfileInfo() {
   return (
@@ -24,7 +24,7 @@ function DisplayIconAndName() {
     >
       <Avatar
         alt="my_icon"
-        src="/profile.jpg"
+        src="/image/profile.jpg"
         sx={{
           width: {
             xs: "6rem",

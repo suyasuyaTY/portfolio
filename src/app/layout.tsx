@@ -1,6 +1,7 @@
 import React from "react";
-import Hedder from "@/component/hedder/hedder";
+import Hedder from "@/component/base/Hedder";
 import type { Metadata } from "next";
+import { Box } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "suyasuya_TY",
@@ -19,7 +20,12 @@ export default function RootLayout({
       </head>
       <body>
         <Hedder />
-        {children}
+        <Box
+          component="main"
+          sx={{ marginTop: "96px", marginX: { lg: "10rem" } }}
+        >
+          {children}
+        </Box>
       </body>
     </html>
   );

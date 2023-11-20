@@ -1,7 +1,15 @@
 import { Typography, Grid } from "@mui/material";
 import { Link as MuiLink } from "@mui/material";
-import IconSelector from "./IconSelector";
 import React from "react";
+import { SvgIcon } from "@mui/material";
+import Twitter from "public/icon/twitter.svg";
+import GitHub from "public/icon/github.svg";
+import Zenn from "public/icon/zenn.svg";
+import Note from "public/icon/note.svg";
+
+type ioProps = {
+  platform: string;
+};
 
 type Props = {
   platform: string;
@@ -38,5 +46,27 @@ export function LinkInfo({ platform, name, url }: Props) {
         </Grid>
       </Grid>
     </MuiLink>
+  );
+}
+
+function Platform({ platform }: ioProps) {
+  if (platform === "Twitter") {
+    return <Twitter />;
+  } else if (platform === "GitHub") {
+    return <GitHub />;
+  } else if (platform === "Zenn") {
+    return <Zenn />;
+  } else if (platform === "note") {
+    return <Note />;
+  } else {
+    return null;
+  }
+}
+
+function IconSelector({ platform }: ioProps) {
+  return (
+    <SvgIcon>
+      <Platform platform={platform} />
+    </SvgIcon>
   );
 }

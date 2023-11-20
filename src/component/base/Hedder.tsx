@@ -1,9 +1,22 @@
 "use client";
 import React, { useState, useRef } from "react";
 import Link from "next/link";
-
 import MenuIcon from "@mui/icons-material/Menu";
-import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material";
+import {
+  Typography,
+  Box,
+  AppBar,
+  Toolbar,
+  Avatar,
+  IconButton,
+  Menu,
+  MenuItem,
+} from "@mui/material";
+
+type navItem = {
+  name: string;
+  url: string;
+};
 
 type menuListProps = {
   navItems: {
@@ -12,7 +25,41 @@ type menuListProps = {
   }[];
 };
 
-export default function MenuList(props: menuListProps) {
+export default function Hedder() {
+  const navItems: navItem[] = [
+    {
+      name: "ホーム",
+      url: "/",
+    },
+    {
+      name: "作ったもの",
+      url: "/Working",
+    },
+    {
+      name: "書いたもの",
+      url: "/Articles",
+    },
+  ];
+
+  return (
+    <AppBar component="nav">
+      <Toolbar>
+        <Avatar
+          alt="my_icon"
+          src="/image/profile.jpg"
+          sx={{
+            marginRight: "auto",
+            width: "3rem",
+            height: "3rem",
+          }}
+        />
+        <MenuList navItems={navItems} />
+      </Toolbar>
+    </AppBar>
+  );
+}
+
+function MenuList(props: menuListProps) {
   const [menuListIsOpen, setMenuListIsOpen] = useState(false);
 
   const anchorEl = useRef<HTMLButtonElement>(null);
