@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  width: 100%;
+  border-bottom: 4px #999 solid;
+  margin-top: 48px;
+  margin-bottom: 36px;
+}
+
+.title {
+  width: 70%;
+  font-size: 1.8rem;
+  padding-left: 12px;
+  padding-bottom: 0.2rem;
+}
+
+.date {
+  width: 30%;
+  text-align: end;
+  padding-bottom: 0.05rem;
+}

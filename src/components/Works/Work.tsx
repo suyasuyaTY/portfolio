@@ -6,6 +6,11 @@ import { Headline } from "../Base/Headline";
 export function Work() {
   return (
     <div className={styles.wrapper}>
+      <Headline
+        title="Work"
+        releaseDay="2024/04/20"
+        lastUpdateDay="2024/04/20"
+      />
       {works.map((work, index) => (
         <Card
           key={index}
