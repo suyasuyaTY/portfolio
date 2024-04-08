@@ -1,17 +1,12 @@
-import styles from "@/styles/Article/ArticleCard.module.css";
-import { ArticleLink } from "@/consts/note/article";
-import Image from "next/image";
+import styles from '@/styles/Article/ArticleCard.module.css';
+import { ArticleLink } from '@/consts/note/article';
+import Image from 'next/image';
 
 export function Card(props: ArticleLink) {
   return (
     <div className={styles.card}>
       <a href={props.href} target="_blank">
-        <Image
-          src={props.imageLink}
-          alt={props.title}
-          width={320}
-          height={180}
-        />
+        <Image src={props.imageLink} alt={props.title} width={320} height={180} />
         <div className={styles.content}>
           <div className={styles.title}>{props.title}</div>
           <div className={styles.info}>

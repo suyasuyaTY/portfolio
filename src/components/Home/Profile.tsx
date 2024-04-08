@@ -1,9 +1,9 @@
-import styles from "@/styles/Home/Profile.module.css";
-import Image from "next/image";
+import styles from '@/styles/Home/Profile.module.css';
+import Image from 'next/image';
 
 const imageStyle = {
-  borderRadius: "5%",
-  border: "1px solid #fff",
+  borderRadius: '5%',
+  border: '1px solid #fff',
 };
 
 export function Profile() {
@@ -11,13 +11,7 @@ export function Profile() {
     <div className={styles.wrapper}>
       <div className={styles.profile}>
         <div className={styles.icon}>
-          <Image
-            src="/myIcon.jpg"
-            alt="myicon"
-            width={180}
-            height={180}
-            style={imageStyle}
-          />
+          <Image src="/myIcon.jpg" alt="myicon" width={180} height={180} style={imageStyle} />
         </div>
         <div className={styles.content}>
           <h3 className={styles.name}>suyasuyaTY</h3>

@@ -1,4 +1,4 @@
-import styles from "@/styles/Base/Section.module.css";
+import styles from '@/styles/Base/Section.module.css';
 
 type sectionlineProps = {
   title: string;

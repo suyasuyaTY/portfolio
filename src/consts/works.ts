@@ -1,7 +1,7 @@
-const techTopic = ["Next.js"] as const;
+const techTopic = ['Next.js'] as const;
 export type TechTopic = (typeof techTopic)[number];
 
-const platform = ["Website", "github"] as const;
+const platform = ['Website', 'github'] as const;
 export type Platform = (typeof platform)[number];
 
 export type Link = {
@@ -18,17 +18,17 @@ export type WorkLink = {
 
 export const works: WorkLink[] = [
   {
-    title: "ポートフォリオサイト",
-    description: "このサイト",
-    topics: ["Next.js"],
+    title: 'ポートフォリオサイト',
+    description: 'このサイト',
+    topics: ['Next.js'],
     links: [
       {
-        href: "https://portfolio-amber-two-24.vercel.app/",
-        description: "Website",
+        href: 'https://portfolio-amber-two-24.vercel.app/',
+        description: 'Website',
       },
       {
-        href: "https://github.com/suyasuyaTY/portfolio",
-        description: "github",
+        href: 'https://github.com/suyasuyaTY/portfolio',
+        description: 'github',
       },
     ],
   },

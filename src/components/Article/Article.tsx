@@ -1,6 +1,6 @@
-import { ArticleLink, articleNoteLinks } from "@/consts/note/article";
-import { Card } from "./Card";
-import styles from "@/styles/Article/Article.module.css";
+import { ArticleLink, articleNoteLinks } from '@/consts/note/article';
+import { Card } from './Card';
+import styles from '@/styles/Article/Article.module.css';
 
 export function Article() {
   return (
@@ -26,14 +26,8 @@ export function Article() {
 function articleLinks(): ArticleLink[] {
   const note = articleNoteLinks.map((link) => ({
     ...link,
-    description: "note",
+    description: 'note',
   }));
 
-  return [...note].sort((a, b) =>
-    a.published_at === b.published_at
-      ? 0
-      : a.published_at < b.published_at
-      ? 1
-      : -1
-  );
+  return [...note].sort((a, b) => (a.published_at === b.published_at ? 0 : a.published_at < b.published_at ? 1 : -1));
 }

@@ -1,5 +1,5 @@
-import styles from "@/styles/Careers/Card.module.css";
-import { Career } from "@/consts/careers";
+import styles from '@/styles/Careers/Card.module.css';
+import { Career } from '@/consts/careers';
 
 export function Card(props: Career) {
   return (
@@ -9,7 +9,7 @@ export function Card(props: Career) {
       </p>
       <div className={styles.content}>
         <p className={styles.title}>{props.title}</p>
-        {props.note ? <p className={styles.note}>※{props.note}</p> : ""}
+        {props.note ? <p className={styles.note}>※{props.note}</p> : ''}
       </div>
     </div>
   );

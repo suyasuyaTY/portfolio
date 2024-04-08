@@ -1,4 +1,4 @@
-import styles from "@/styles/Base/Headline.module.css";
+import styles from '@/styles/Base/Headline.module.css';
 
 type headlineProps = {
   title: string;
