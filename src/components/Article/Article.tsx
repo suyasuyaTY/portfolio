@@ -11,6 +11,7 @@ export function Article() {
             <Card
               title={link.title}
               href={link.href}
+              imageLink={link.imageLink}
               published_at={link.published_at}
               description={link.description}
               tags={link.tags}
