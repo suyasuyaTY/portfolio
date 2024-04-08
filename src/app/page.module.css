@@ -228,3 +228,23 @@
     transform: rotate(0deg);
   }
 }
+
+.hr {
+  position: relative;
+  overflow: visible;
+  text-align: center;
+  color: #888787;
+  border-width: 3px 0 0 0;
+  border-style: double;
+  border-color: #888787;
+}
+
+/* hrの上に重ねて表示するコンテンツを指定 */
+.hr::after {
+  position: absolute;
+  top: -0.7em; /* コンテンツ位置の高さを指定 */
+  left: 50%; /* 左から見たコンテンツ位置を指定 */
+  display: inline-block;
+  content: "ここから話題が変わります"; /* 表示したいテキストを指定 */
+  background: #fff;
+}
