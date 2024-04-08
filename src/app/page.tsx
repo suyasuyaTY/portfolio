@@ -5,7 +5,7 @@ import { Careers } from '@/components/Careers/Carrers';
 
 export default function Home() {
   return (
-    <main className="px-4 pt-12">
+    <main className="px-4 pt-48">
       <Profile />
       <Sectionline title="Works" />
       <Works />
