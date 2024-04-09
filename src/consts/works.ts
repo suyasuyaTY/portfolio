@@ -12,14 +12,48 @@ export type Link = {
 export type WorkLink = {
   title: string;
   description: string;
+  immageLink: string;
   topics: TechTopic[];
   links: Link[];
 };
 
 export const works: WorkLink[] = [
   {
+    title: 'Portfolio',
+    description: '初めてNext.jsで作ったサイト',
+    immageLink: '/dummy1.jpg',
+    topics: ['Next.js'],
+    links: [
+      {
+        href: 'https://portfolio-amber-two-24.vercel.app/',
+        description: 'Website',
+      },
+      {
+        href: 'https://github.com/suyasuyaTY/portfolio',
+        description: 'github',
+      },
+    ],
+  },
+  {
     title: 'ポートフォリオサイト',
     description: 'このサイト',
+    immageLink: '/dummy2.jpg',
+    topics: ['Next.js'],
+    links: [
+      {
+        href: 'https://portfolio-amber-two-24.vercel.app/',
+        description: 'Website',
+      },
+      {
+        href: 'https://github.com/suyasuyaTY/portfolio',
+        description: 'github',
+      },
+    ],
+  },
+  {
+    title: 'ポートフォリオサイト',
+    description: 'このサイト',
+    immageLink: '/dummy1.jpg',
     topics: ['Next.js'],
     links: [
       {
