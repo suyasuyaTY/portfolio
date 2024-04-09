@@ -1,15 +1,14 @@
-import { Works } from '@/components/Works/Works';
-import { Profile } from '@/components/Home/Profile';
-import { Sectionline } from '@/components/Base/Sectionline';
-import { Careers } from '@/components/Careers/Carrers';
+import { Works } from '@/components/pages/Top/Works';
+import { Profile } from '@/components/pages/Top/Profile';
+import { Careers } from '@/components/pages/Top/Carrers';
+import { Articles } from '@/components/pages/Top/Articles';
 
 export default function Home() {
   return (
-    <main className="px-4 pt-48">
+    <main className="px-4 pt-40">
       <Profile />
-      <Sectionline title="Works" />
       <Works />
-      <Sectionline title="Careers" />
+      <Articles />
       <Careers />
     </main>
   );
