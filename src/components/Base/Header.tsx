@@ -8,7 +8,7 @@ const links = [
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full h-12 bg-white border-b-2 border-gray-200">
+    <header className="fixed top-0 left-0 w-full h-12 border-b-2 border-gray-200 bg-purple-50">
       <nav className="flex flex-row justify-between h-12">
         <h1 className="w-48 text-xl ml-4 h-full flex items-center">
           <Link href={'/'}>suyasuyaTY</Link>
