@@ -2,13 +2,13 @@ import { ArticleLink, articleNoteLinks } from '@/consts/note/article';
 import { ArticleCard } from '@/components/Base/Card/ArticleCard';
 import { Section } from '@/components/Base/Section';
 import { SectionTitle } from '@/components/Base/SectionTitle';
-import { FaPen } from 'react-icons/fa';
+import { MdArticle } from 'react-icons/md';
 
 export function Articles() {
   return (
     <Section>
       <SectionTitle>
-        <FaPen className="w-6 h-6" />
+        <MdArticle className="w-6 h-6" />
         <span className="text-3xl ml-2">Articles</span>
       </SectionTitle>
       <div className="grid grid-cols-3 gap-3">
