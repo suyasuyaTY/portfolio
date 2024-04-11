@@ -27,13 +27,6 @@ export function WorkCard(props: WorkLink) {
       <div className="w-full h-24 px-4 pt-4 pb-2 rounded-b-md bg-slate-100">
         <h4 className="text-sm font-sans">{props.title}</h4>
         <p className="text-xs text-slate-500 mb-2">{props.description}</p>
-        <div className="flex justify-start">
-          {props.topics.map((topic) => (
-            <span key={topic} className={getTopicStyle(topic) + ' ' + 'text-xs border-2 rounded p-0.5'}>
-              {topic}
-            </span>
-          ))}
-        </div>
       </div>
     </div>
   );
