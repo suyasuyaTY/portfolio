@@ -3,13 +3,13 @@ import Link from 'next/link';
 const links = [
   { name: 'TOP', href: '/' },
   { name: 'Works', href: '/works' },
-  { name: 'Articles', href: '/Articles' },
+  { name: 'Articles', href: '/articles' },
 ];
 
 export function Header() {
   return (
     <header className="fixed top-0 left-0 w-full h-12 border-b-2 border-gray-200 bg-purple-50">
-      <nav className="flex flex-row justify-between h-12">
+      <nav className="hidden sm:flex flex-row justify-between h-12">
         <h1 className="w-48 text-xl ml-4 h-full flex items-center">
           <Link href={'/'}>suyasuyaTY</Link>
         </h1>
@@ -26,6 +26,7 @@ export function Header() {
           ))}
         </div>
       </nav>
+      <div className="sm:hidden">suyasuyaTY</div>
     </header>
   );
 }
