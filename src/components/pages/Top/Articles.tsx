@@ -11,7 +11,7 @@ export function Articles() {
         <MdArticle className="w-6 h-6" />
         <span className="text-3xl ml-2">Articles</span>
       </SectionTitle>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="px-4 grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
         {articleLinks().map((link, index) => (
           <ArticleCard
             key={index}
@@ -27,6 +27,7 @@ export function Articles() {
     </Section>
   );
 }
+
 function articleLinks(): ArticleLink[] {
   const note = articleNoteLinks.map((link) => ({
     ...link,

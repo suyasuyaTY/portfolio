@@ -12,7 +12,7 @@ export function Works() {
   return (
     <div>
       <Headline {...headlineData} />
-      <div className="grid grid-cols-3 gap-3 py-8 px-6">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 py-8 px-6">
         {works.map((work, index) => (
           <WorkCard
             key={index}
