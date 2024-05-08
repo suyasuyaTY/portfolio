@@ -1,13 +1,13 @@
-import { Works } from '@/components/pages/Top/Works';
-import { Profile } from '@/components/pages/Top/Profile';
-import { Articles } from '@/components/pages/Top/Articles';
+import { Articles } from '@/components/sections/Articles/Articles';
+import { Profile } from '@/components/sections/Profile/Profile';
+import { Works } from '@/components/sections/Works/Works';
 
-export default function Home() {
+export default function Index() {
   return (
-    <main className="px-4 pt-24">
+    <div>
       <Profile />
       <Works />
       <Articles />
-    </main>
+    </div>
   );
 }

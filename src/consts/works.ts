@@ -12,7 +12,7 @@ export type Link = {
 export type WorkLink = {
   title: string;
   description: string;
-  immageLink: string;
+  imageLink: string;
   topics: TechTopic[];
   links: Link[];
 };
@@ -21,7 +21,7 @@ export const works: WorkLink[] = [
   {
     title: 'Portfolio',
     description: '初めてNext.jsで作ったサイト',
-    immageLink: '/dummy1.jpg',
+    imageLink: '/dummy1.jpg',
     topics: ['Next.js'],
     links: [
       {
