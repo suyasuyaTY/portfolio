@@ -6,7 +6,7 @@ export type headlineProps = {
 
 export function Headline(props: headlineProps) {
   return (
-    <div className="flex justify-between px-4 border-b-2">
+    <div className="flex justify-between border-b-2 px-4">
       <h2 className="text-3xl">{props.title}</h2>
       <div>
         <p>公開日: {props.releaseDate}</p>

@@ -8,10 +8,10 @@ export function Works() {
   return (
     <Section>
       <SectionTitle>
-        <FaPen className="w-6 h-6" />
-        <span className="text-3xl ml-2">Works</span>
+        <FaPen className="size-6" />
+        <span className="ml-2 text-3xl">Works</span>
       </SectionTitle>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 sm:gap-4 md:gap-6">
+      <div className="grid sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:gap-6">
         {works.map((work, index) => (
           <WorkCard
             key={index}

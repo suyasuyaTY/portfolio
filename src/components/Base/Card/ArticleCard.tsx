@@ -3,20 +3,20 @@ import Image from 'next/image';
 
 export function ArticleCard(props: ArticleLink) {
   return (
-    <div className="border-2 border-slate-200 rounded-md">
+    <div className="rounded-md border-2 border-slate-200">
       <div>
         <Image
           src={props.imageLink}
           alt={'black'}
           width={1600}
           height={900}
-          className="rounded-t-md aspect-video w-full"
+          className="aspect-video w-full rounded-t-md"
         />
       </div>
 
-      <div className="flex flex-col justify-between w-full h-24 p-4 rounded-b-md bg-slate-100">
-        <h4 className="text-sm font-sans">{props.title}</h4>
-        <div className="text-xs text-gray-400 flex justify-between">
+      <div className="flex h-24 w-full flex-col justify-between rounded-b-md bg-slate-100 p-4">
+        <h4 className="font-sans text-sm">{props.title}</h4>
+        <div className="flex justify-between text-xs text-gray-400">
           <span>{props.description}</span>
           <span>{props.published_at}</span>
         </div>

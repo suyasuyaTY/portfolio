@@ -8,10 +8,10 @@ export function Articles() {
   return (
     <Section>
       <SectionTitle>
-        <MdArticle className="w-6 h-6" />
-        <span className="text-3xl ml-2">Articles</span>
+        <MdArticle className="size-6" />
+        <span className="ml-2 text-3xl">Articles</span>
       </SectionTitle>
-      <div className="px-4 grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+      <div className="grid gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
         {articleLinks().map((link, index) => (
           <ArticleCard
             key={index}

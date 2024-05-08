@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export function Profile() {
   return (
-    <div className="w-64 md:w-full mx-auto md:max-w-3xl md:mb-16">
+    <div className="mx-auto w-64 md:mb-16 md:w-full md:max-w-3xl">
       <div className="px-4 md:flex md:justify-between">
         <div className="flex items-center justify-center md:w-2/5">
           <Image src="/myIcon.jpg" alt="myicon" width={224} height={224} className="rounded-full" />
@@ -27,8 +27,8 @@ export function Profile() {
             <p>IMAWANOKIWA</p>
           </div>
         </div>
-        <div className="text-center mt-2 md:text-start md:w-1/5 md:relative">
-          <Link href={'/profile'} className="text-blue-500 group md:absolute md:bottom-0">
+        <div className="mt-2 text-center md:relative md:w-1/5 md:text-start">
+          <Link href={'/profile'} className="group text-blue-500 md:absolute md:bottom-0">
             もっと見る <span className="inline-block transition duration-100 group-hover:translate-x-2">&rarr;</span>
           </Link>
         </div>

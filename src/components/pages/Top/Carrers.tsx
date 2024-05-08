@@ -8,10 +8,10 @@ export function Careers() {
   return (
     <Section>
       <SectionTitle>
-        <AiFillClockCircle className="w-6 h-6" />
-        <span className="text-3xl ml-2">History</span>
+        <AiFillClockCircle className="size-6" />
+        <span className="ml-2 text-3xl">History</span>
       </SectionTitle>
-      <ol className="max-w-3xl m-auto">
+      <ol className="m-auto max-w-3xl">
         {careers.map((carrer, index) => (
           <li key={index}>
             <CareerCard

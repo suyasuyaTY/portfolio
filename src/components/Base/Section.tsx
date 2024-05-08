@@ -3,5 +3,5 @@ export function Section({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className="max-w-6xl w-[95%] mx-auto pb-16">{children}</div>;
+  return <div className="mx-auto w-[95%] max-w-6xl pb-16">{children}</div>;
 }

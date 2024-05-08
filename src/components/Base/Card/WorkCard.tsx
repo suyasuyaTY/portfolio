@@ -13,20 +13,20 @@ const getTopicStyle = (topic: TechTopic): string => {
 
 export function WorkCard(props: WorkLink) {
   return (
-    <div className="border-2 border-slate-200 rounded-md">
+    <div className="rounded-md border-2 border-slate-200">
       <div>
         <Image
           src={props.immageLink}
           alt={'black'}
           width={1600}
           height={900}
-          className="rounded-t-md aspect-video object-cover w-full"
+          className="aspect-video w-full rounded-t-md object-cover"
         />
       </div>
 
-      <div className="w-full h-24 px-4 pt-4 pb-2 rounded-b-md bg-slate-100">
-        <h4 className="text-sm font-sans">{props.title}</h4>
-        <p className="text-xs text-slate-500 mb-2">{props.description}</p>
+      <div className="h-24 w-full rounded-b-md bg-slate-100 px-4 pb-2 pt-4">
+        <h4 className="font-sans text-sm">{props.title}</h4>
+        <p className="mb-2 text-xs text-slate-500">{props.description}</p>
       </div>
     </div>
   );

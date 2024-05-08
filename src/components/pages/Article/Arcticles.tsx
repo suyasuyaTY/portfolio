@@ -12,7 +12,7 @@ export function Articles() {
   return (
     <div>
       <Headline {...headlineData} />
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 py-8 px-6">
+      <div className="grid gap-3 px-6 py-8 sm:grid-cols-2 md:grid-cols-3">
         {articleLinks().map((link, index) => (
           <ArticleCard
             key={index}

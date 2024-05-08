@@ -5,9 +5,9 @@ import Image from 'next/image';
 export function CareerCard(props: Career) {
   return (
     <div className="relative">
-      <div className="absolute h-full border-l-2 left-[5px]" />
-      <div className="w-3 h-3 bg-gray-200 rounded-full" />
-      <div className="pl-8 pb-10">
+      <div className="absolute left-[5px] h-full border-l-2" />
+      <div className="size-3 rounded-full bg-gray-200" />
+      <div className="pb-10 pl-8">
         <time className="absolute -top-0.5 text-xs font-normal leading-none text-gray-400">
           {props.startDate} ~ {props.endDate}
         </time>

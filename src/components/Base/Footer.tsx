@@ -4,7 +4,7 @@ import Image from 'next/image';
 export function Footer() {
   return (
     <footer className="py-6">
-      <div className="flex justify-between max-w-4xl w-[95%] mx-auto">
+      <div className="mx-auto flex w-[95%] max-w-4xl justify-between">
         <div>&copy; 2024 suyasuyaTY</div>
         <div className="flex gap-2">
           {links.map((item, index) => (
@@ -30,7 +30,7 @@ function IconImage(props: iconImageProps) {
         alt={props.alt}
         width={24}
         height={24}
-        className="bg-slate-100 border-2 rounded-md p-1 hover:bg-slate-200"
+        className="rounded-md border-2 bg-slate-100 p-1 hover:bg-slate-200"
       />
     </a>
   );

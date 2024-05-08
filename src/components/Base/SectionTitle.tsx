@@ -4,7 +4,7 @@ export function SectionTitle({
   children: React.ReactNode;
 }>) {
   return (
-    <h2 className="w-full text-center my-8">
+    <h2 className="my-8 w-full text-center">
       <span className="flex items-center justify-center">{children}</span>
     </h2>
   );
