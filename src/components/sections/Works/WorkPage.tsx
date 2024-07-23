@@ -14,8 +14,8 @@ export function WorkPage() {
     <div>
       <Headline {...headlineData} />
       <CardList>
-        {works.map(({ title, description, imageLink }) => (
-          <WorkCard key={title} title={title} description={description} href="" imageLink={imageLink} />
+        {works.map(({ title, description, image }) => (
+          <WorkCard key={title} title={title} description={description} href={`/works/${title}`} imageLink={image} />
         ))}
       </CardList>
     </div>
