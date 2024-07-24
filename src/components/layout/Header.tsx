@@ -15,7 +15,7 @@ const links = [
   { title: 'Articles', url: '/articles' },
 ];
 
-export function Header() {
+export default function Header() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(!open);

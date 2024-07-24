@@ -1,4 +1,4 @@
-import { Headline, headlineProps } from '@/components/base/Headline';
+import { Headline, headlineProps } from '@/components/layout/Headline';
 import { CardList } from '@/components/base/List';
 import { works } from '@/consts/works';
 import { WorkCard } from './WorkCard';
