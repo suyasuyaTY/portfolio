@@ -1,13 +1,13 @@
-import { Articles } from '@/components/sections/Articles/Articles';
-import { Profile } from '@/components/sections/Profile/Profile';
-import { Works } from '@/components/sections/Works/Works';
+import { Metadata } from 'next';
+import Main from '@/app/_components/Main';
 
-export default function Index() {
-  return (
-    <div>
-      <Profile />
-      <Works />
-      <Articles />
-    </div>
-  );
-}
+export const metadata: Metadata = {
+  title: 'suyasuyaTY',
+  description: '一日一進捗',
+};
+
+const Page = () => {
+  return <Main />;
+};
+
+export default Page;

@@ -1,9 +1,5 @@
-import { WorkPage } from '@/components/sections/Works/WorkPage';
+import Main from './Main';
 
-export default function Work() {
-  return (
-    <main>
-      <WorkPage />
-    </main>
-  );
+export default function Page() {
+  return <Main></Main>;
 }

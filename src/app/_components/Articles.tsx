@@ -1,18 +1,18 @@
-import { Section, SectionContent, SectionTitle } from '@/components/base/Section';
+import { CardList } from '@/components/common/CardList';
+import { PageTitle } from '@/components/common/PageTitle';
 import { MdArticle } from 'react-icons/md';
-import { ArticleCard } from './ArticleCard';
-import { CardList } from '@/components/base/List';
 
 export function Articles() {
   return (
-    <Section>
-      <SectionTitle>
+    <div>
+      <PageTitle>
         <div className="flex items-center justify-center">
           <MdArticle className="size-6" />
           <span className="ml-2 text-3xl">Articles</span>
         </div>
-      </SectionTitle>
-    </Section>
+      </PageTitle>
+      <CardList>{<></>}</CardList>
+    </div>
   );
 }
 

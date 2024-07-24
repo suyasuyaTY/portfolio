@@ -1,9 +1,5 @@
-import { ArticlesPage } from '@/components/sections/Articles/ArticlesPage';
+import Main from './Main';
 
-export default function Article() {
-  return (
-    <main>
-      <ArticlesPage />
-    </main>
-  );
+export default function Page() {
+  return <Main></Main>;
 }
