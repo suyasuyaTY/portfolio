@@ -11,7 +11,7 @@ type Props = {
   };
 };
 
-export function ExternalLink({ platform, name, url, color, icon }: Props) {
+export function ExternalLinkCard({ platform, name, url, color, icon }: Props) {
   return (
     <a href={url} className={cn('group flex w-64 items-center rounded py-1 pr-2 transition duration-300', color)}>
       <div className="flex w-3/5 justify-start gap-4 transition-all duration-500 group-hover:translate-x-2">

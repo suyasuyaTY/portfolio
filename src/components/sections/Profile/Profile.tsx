@@ -1,4 +1,4 @@
-import { ExternalLink } from '@/components/ui/ExternalLink';
+import { ExternalLinkCard } from '@/components/card/ExternalLinkCard';
 import { links } from '@/consts/link';
 import Image from 'next/image';
 
@@ -36,7 +36,7 @@ export function Profile() {
         <div className="mx-auto grid gap-2 sm:grid-cols-2 lg:w-1/3 lg:grid-cols-1 lg:gap-4">
           {links.map((link, index) => {
             return (
-              <ExternalLink
+              <ExternalLinkCard
                 key={index}
                 platform={link.platform}
                 name={link.name}
