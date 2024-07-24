@@ -4,10 +4,8 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 
 import { ToggleButton } from '../ui/ToggleButton';
-import { ToggleMenu } from '../ui/ToggleMenu';
 
 import { cn } from '@/utils/classname';
-import { InternalLink } from '../ui/InternalLink';
 
 const links = [
   { title: 'Top', url: '/' },
@@ -52,5 +50,48 @@ export default function Header() {
         </div>
       </nav>
     </header>
+  );
+}
+
+type Props = {
+  title: string;
+  url: string;
+  handleClose?: () => void;
+};
+
+function InternalLink({ title, url, handleClose }: Props) {
+  return (
+    <Link
+      href={url}
+      onClick={handleClose}
+      className="after:content relative flex size-full items-center justify-center after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-top after:scale-x-0 after:scale-y-100 after:bg-cyan-300 after:transition-all after:duration-300 hover:after:scale-x-100"
+    >
+      {title}
+    </Link>
+  );
+}
+
+type ToggleMenuProps = {
+  open: boolean;
+  items: { title: string; url: string }[];
+  handleClose: () => void;
+};
+
+function ToggleMenu({ open, items, handleClose }: ToggleMenuProps) {
+  return (
+    <ul>
+      {items.map(({ title, url }) => (
+        <li key={url} className={cn('transition-all ease-out duration-300 border-t-0', open && 'border-t')}>
+          <p
+            className={cn(
+              'transition-all ease-out duration-300 h-0 opacity-0 invisible',
+              open && 'h-12 opacity-100 visible',
+            )}
+          >
+            <InternalLink title={title} url={url} handleClose={handleClose} />
+          </p>
+        </li>
+      ))}
+    </ul>
   );
 }
