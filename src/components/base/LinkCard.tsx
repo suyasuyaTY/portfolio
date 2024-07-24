@@ -1,4 +1,3 @@
-import { TechTopic } from '@/consts/works';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -30,7 +29,7 @@ type FooterProps = {
 function LinkCardFooter({ title, children }: FooterProps) {
   return (
     <div className="w-full rounded-b-md bg-slate-100 p-4">
-      <h4 className="font-sans text-sm">{title}</h4>
+      <h4 className="text-sm">{title}</h4>
       {children}
     </div>
   );
