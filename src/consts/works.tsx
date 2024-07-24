@@ -20,9 +20,9 @@ export type Work = {
 export const works: Work[] = [
   {
     id: '2024-portfolio',
-    title: 'suyasuyaTY-portfolio',
-    description: '初めてNext.jsで作ったサイト',
-    url: 'suyasuya-ty.vercel.app',
+    title: 'portfolio',
+    description: '個人サイト',
+    url: 'https://suyasuya-ty.vercel.app',
     image: '/works/portfolio.png',
     repositories: ['https://github.com/suyasuyaTY/portfolio'],
     TechStack: [
@@ -30,8 +30,21 @@ export const works: Work[] = [
       { label: 'Next.js', type: 'framework' },
       { label: 'tailwind CSS', type: 'styling' },
     ],
-    features: <div></div>,
-    updates: <div></div>,
+    features: (
+      <div>
+        <li>作品・記事一覧</li>
+        <li>外部リンク</li>
+      </div>
+    ),
+    updates: (
+      <div>
+        <li>About me節の作成</li>
+        <li>リファクタリングの実施</li>
+        <li>制作物・記事が増えてきたときに「もっと見る」欄の作成</li>
+        <li>ダークモードの作成</li>
+        <li>アルバムの作成</li>
+      </div>
+    ),
     tags: ['個人開発'],
   },
 ];
