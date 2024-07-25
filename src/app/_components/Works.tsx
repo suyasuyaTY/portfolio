@@ -14,13 +14,14 @@ export function Works() {
         </div>
       </PageTitle>
       <CardList>
-        {works.map(({ title, description, image }) => {
+        {works.slice(0, 5).map(({ title, description, image }) => {
           return (
             <LinkCard key={title} image={image} title={title} url={`/works/${title}`} isExternal={false}>
               <p className="mb-2 text-xs text-slate-500">{description}</p>
             </LinkCard>
           );
         })}
+        {works.length >= 6 && <div>もっと見る</div>}
       </CardList>
     </div>
   );
