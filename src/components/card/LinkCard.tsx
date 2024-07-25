@@ -48,7 +48,7 @@ type FooterProps = {
 function LinkCardFooter({ title, children }: FooterProps) {
   return (
     <div className="w-full rounded-b-md bg-slate-100 p-4">
-      <h4 className="text-sm">{title}</h4>
+      <h4 className="text-sm font-semibold">{title}</h4>
       {children}
     </div>
   );

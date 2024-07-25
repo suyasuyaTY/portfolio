@@ -16,7 +16,7 @@ export function Works() {
       <CardList>
         {works.map(({ title, description, image }) => {
           return (
-            <LinkCard key={title} image={image} title={title} url={`/works/${title}`} isExternal={true}>
+            <LinkCard key={title} image={image} title={title} url={`/works/${title}`} isExternal={false}>
               <p className="mb-2 text-xs text-slate-500">{description}</p>
             </LinkCard>
           );
