@@ -3,6 +3,7 @@ import { FaPen } from 'react-icons/fa';
 import { PageTitle } from '@/components/common/PageTitle';
 import { CardList } from '@/components/common/CardList';
 import { Card, CardMedia, CardContent } from '@/components/ui/Card';
+import Link from 'next/link';
 
 export function Works() {
   return (
@@ -16,19 +17,21 @@ export function Works() {
       <CardList>
         {works.slice(0, 5).map((work, index) => {
           return (
-            <Card key={index} className="rounded-md border-2 border-slate-200">
-              <CardMedia
-                image={work.image}
-                title={work.title}
-                width={1600}
-                height={900}
-                className="aspect-video w-full rounded-t-md object-cover"
-              />
-              <CardContent className="w-full rounded-b-md bg-slate-100 p-4">
-                <h4 className="text-sm font-semibold">{work.title}</h4>
-                <p className="mb-2 text-xs text-slate-500">{work.description}</p>
-              </CardContent>
-            </Card>
+            <Link key={index} href={`/works/${work.title}`}>
+              <Card key={index} className="rounded-md border-2 border-slate-200">
+                <CardMedia
+                  image={work.image}
+                  title={work.title}
+                  width={1600}
+                  height={900}
+                  className="aspect-video w-full rounded-t-md object-cover"
+                />
+                <CardContent className="w-full rounded-b-md bg-slate-100 p-4">
+                  <h4 className="text-sm font-semibold">{work.title}</h4>
+                  <p className="mb-2 text-xs text-slate-500">{work.description}</p>
+                </CardContent>
+              </Card>
+            </Link>
           );
         })}
         {works.length >= 6 && <div>もっと見る</div>}
