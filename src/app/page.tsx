@@ -1,13 +1,18 @@
-import { Articles } from '@/components/sections/Articles/Articles';
-import { Profile } from '@/components/sections/Profile/Profile';
-import { Works } from '@/components/sections/Works/Works';
+import { Metadata } from 'next';
+import Main from '@/app/_components/Main';
+import { PageWrapper } from '@/components/common/PageWrapper';
 
-export default function Index() {
+export const metadata: Metadata = {
+  title: 'suyasuyaTY',
+  description: '一日一進捗',
+};
+
+const Page = () => {
   return (
-    <div>
-      <Profile />
-      <Works />
-      <Articles />
-    </div>
+    <PageWrapper>
+      <Main />
+    </PageWrapper>
   );
-}
+};
+
+export default Page;

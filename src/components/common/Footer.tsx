@@ -1,7 +1,7 @@
 import { links } from '@/consts/link';
 import Image from 'next/image';
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="py-6">
       <div className="mx-auto flex w-[95%] max-w-4xl justify-between">

@@ -1,9 +1,10 @@
-import { WorkPage } from '@/components/sections/Works/WorkPage';
+import { PageWrapper } from '@/components/common/PageWrapper';
+import Main from './Main';
 
-export default function Work() {
+export default function Page() {
   return (
-    <main>
-      <WorkPage />
-    </main>
+    <PageWrapper>
+      <Main></Main>
+    </PageWrapper>
   );
 }
