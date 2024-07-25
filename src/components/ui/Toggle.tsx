@@ -1,9 +1,7 @@
 'use client';
 
 import { cn } from '@/utils/classname';
-import Link from 'next/link';
 import React, { createContext, useContext, useState } from 'react';
-import { InternalLink } from '../card/InternalLinkCard';
 
 type ToggleMenuContextValue = {
   isOpen: boolean;
@@ -82,22 +80,20 @@ const ToggleMenuContent = ({ children }: ToggleMenuContentProps) => {
 };
 
 type ToggleMenuItemProps = {
-  title: string;
-  url: string;
+  children: React.ReactNode;
 };
 
-const ToggleMenuItem = ({ title, url }: ToggleMenuItemProps) => {
+const ToggleMenuItem = ({ children }: ToggleMenuItemProps) => {
   const info = useContext(ToggleMenuContext);
   return (
-    <li key={url} className={cn('transition-all ease-out duration-300 border-t-0', info.isOpen && 'border-t')}>
-      <p
-        className={cn(
-          'transition-all ease-out duration-300 h-0 opacity-0 invisible',
-          info.isOpen && 'h-12 opacity-100 visible',
-        )}
-      >
-        <InternalLink title={title} url={url} handleClose={info.handleClose} />
-      </p>
+    <li
+      className={cn(
+        'transition-all ease-out duration-300 border-t-0 h-0 opacity-0 invisible',
+        info.isOpen && 'border-t h-12 opacity-100 visible',
+      )}
+      onClick={info.handleClose}
+    >
+      {children}
     </li>
   );
 };

@@ -26,7 +26,9 @@ export default function Header() {
           <ToggleMenuTrigger />
           <ToggleMenuContent>
             {links.map(({ title, url }, index) => (
-              <ToggleMenuItem title={title} url={url} key={index} />
+              <ToggleMenuItem key={index}>
+                <InternalLink title={title} url={url} />
+              </ToggleMenuItem>
             ))}
           </ToggleMenuContent>
         </ToggleMenu>
