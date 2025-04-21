@@ -14,9 +14,7 @@ const Profile = () => {
           <div>
             <h4 className="text-xs text-teal-400">所属</h4>
             <p className="text-sm text-slate-900">
-              東京工業大学情報通信系 (21B)
-              <br />
-              Titech App Project
+              東京工業大学情報通信系 (25M)
             </p>
           </div>
           <div>
