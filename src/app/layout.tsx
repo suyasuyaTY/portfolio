@@ -42,7 +42,7 @@ const josefinSans = Josefin_Sans({
 
 export const metadata: Metadata = {
   title: "suyasuyaTY.minna",
-  description: "「格好が悪いのが格好が良い」だとかなんて逃げ道は断て",
+  description: "向いてないないなら書き変えてしまえよ",
 };
 
 export default function RootLayout({

@@ -44,7 +44,7 @@ export const careerData: Career[] = [
     title: "IVRC2024",
     subTitle: "バーチャル脱皮",
     link: "https://ivrc.net/2024/",
-    category: "achievement",
+    category: "activity",
     description: (
       <>
         チームにて
@@ -74,6 +74,6 @@ export const careerData: Career[] = [
     title: "応用情報技術者試験",
     subTitle: "春季合格",
     link: "https://www.ipa.go.jp/shiken/kubun/ap.html",
-    category: "activity",
+    category: "achievement",
   },
 ];
