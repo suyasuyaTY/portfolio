@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 import H2 from "@/components/common/H2";
-import { songs } from "./const/song";
 
 import { MdMusicNote } from "react-icons/md";
 import { FaBuilding, FaCommentDots, FaPlane } from "react-icons/fa";
-import { FaMusic } from "react-icons/fa6";
+
+import { songs } from "./const/song";
 
 export default function About() {
   return (
@@ -39,10 +41,12 @@ export default function About() {
               rel="noopener noreferrer"
               className="group relative overflow-hidden rounded-lg shadow-lg/30"
             >
-              <img
+              <Image
                 src={song.thumbnailUrl}
                 alt={song.title}
-                className="w-full h-auto object-cover"
+                width={480}
+                height={360}
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/100 from-0% to-black/20 to-60% opacity-0 group-hover:opacity-100 z-10 duration-300 transition-opacity" />
               <div className="absolute text-white bottom-2 left-2 z-20 group-hover:-translate-y-4 transition-transform">

@@ -1,6 +1,5 @@
 import { tv } from "tailwind-variants";
 import { CareerCategory } from "../const/career";
-import { time } from "console";
 
 export const careerCheckboxVariants = tv({
   slots: {
@@ -13,7 +12,7 @@ export const careerCheckboxVariants = tv({
       intern: {},
       activity: {},
       achievement: {},
-    } as Record<string, {}>,
+    },
     isChecked: {
       true: {},
       false: {},

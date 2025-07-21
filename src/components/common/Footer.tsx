@@ -1,8 +1,6 @@
 import Anchor from "./Anchor";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear(); // 現在の年を動的に取得
-
   return (
     <footer className="px-4 py-4 flex justify-end items-center mt-auto">
       <p className="text-sm font-sans">

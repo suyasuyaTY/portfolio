@@ -1,4 +1,9 @@
-type CheckboxVariantFunction = (props: any) => {
+type VariantFunctionProps = {
+  isChecked: boolean;
+  [key: string]: string | boolean;
+};
+
+type CheckboxVariantFunction = (props: VariantFunctionProps) => {
   button: () => string;
   dot: () => string;
 };
