@@ -8,14 +8,28 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sofia: var(--font-sofia-sans);
+  --font-gothic: var(--font-biz-udgothic);
+  --font-quicksand: var(--font-quicksand);
+  --font-josefin: var(--font-josefin-sans);
+
+  /* カテゴリ: インターン */
+  --color-intern: #d2d200;
+  --color-intern-light: #fefce8;
+
+  /* カテゴリ: 活動 */
+  --color-activity: #00a096;
+  --color-activity-light: #ccfbf1;
+
+  /* カテゴリ: 実績 */
+  --color-achievement: #00a5dd;
+  --color-achievement-light: #f0f9ff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #0a0a0a;
   }
 }
 

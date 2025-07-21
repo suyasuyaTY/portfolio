@@ -1,15 +1,43 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  BIZ_UDGothic,
+  Josefin_Sans,
+  Quicksand,
+  Sofia_Sans,
+} from "next/font/google";
 import "./globals.css";
+import PageTransition from "@/components/PageTrainsition/PageTransition";
+import { TransitionProvider } from "@/components/PageTrainsition/TransitionContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// 日本語フォント
+const bizUDGothic = BIZ_UDGothic({
   subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-biz-udgothic",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// 英語フォント
+
+const quicksand = Quicksand({
   subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-quicksand",
+  display: "swap",
+});
+
+const sofiaSans = Sofia_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-sofia-sans",
+  display: "swap",
+});
+
+const josefinSans = Josefin_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-josefin-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +51,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bizUDGothic.variable} ${sofiaSans.variable} ${quicksand.variable} ${josefinSans.variable} antialiased`}
       >
-        {children}
+        <TransitionProvider>
+          <PageTransition>{children}</PageTransition>
+        </TransitionProvider>
       </body>
     </html>
   );
