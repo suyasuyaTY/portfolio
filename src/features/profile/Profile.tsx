@@ -14,8 +14,10 @@ export default function Profile() {
           priority
         />
         <div>
-          <div className="text-5xl font-bold font-quicksand">suyasuyaTY</div>
-          <p className="mt-2 text-slate-700/80 font-bold text-sm">
+          <div className="text-center text-3xl md:text-start sm:text-5xl font-bold font-quicksand">
+            suyasuyaTY
+          </div>
+          <p className="text-center mt-2 md:text-start  text-slate-700/80 font-bold text-sm">
             つよつよプログラマーになる予定
           </p>
           <p className="my-8 text-base/relaxed">

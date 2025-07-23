@@ -61,7 +61,7 @@ export default function Articles() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-xl font-bold text-black font-gothic">
+                  <h3 className="text-sm font-bold text-black font-gothic">
                     {article.title}
                   </h3>
                 </div>
