@@ -13,17 +13,15 @@
   --font-quicksand: var(--font-quicksand);
   --font-josefin: var(--font-josefin-sans);
 
-  /* カテゴリ: インターン */
-  --color-intern: #d2d200;
-  --color-intern-light: #fefce8;
+  --color-base-1: #d2d200;
+  --color-base-1-light: #fefce8;
 
-  /* カテゴリ: 活動 */
-  --color-activity: #00a096;
-  --color-activity-light: #ccfbf1;
+  --color-base-2: #00a096;
+  --color-base-2-light: #ccfbf1;
 
   /* カテゴリ: 実績 */
-  --color-achievement: #00a5dd;
-  --color-achievement-light: #f0f9ff;
+  --color-base-3: #00a5dd;
+  --color-base-3-light: #f0f9ff;
 }
 
 @media (prefers-color-scheme: dark) {

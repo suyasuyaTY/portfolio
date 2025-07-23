@@ -26,7 +26,7 @@ export default function Career() {
 
   return (
     <>
-      <div className="flex flex-row justify-start gap-8 items-end">
+      <div className="flex flex-col md:flex-row justify-start gap-2 md:gap-8 md:items-end">
         <H2>Career Timeline</H2>
         <div>
           <Checkbox<CareerCategory>

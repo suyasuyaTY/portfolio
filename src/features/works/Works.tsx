@@ -7,12 +7,12 @@ export default function Works() {
   return (
     <Section>
       <H2>Works</H2>
-      <div className="py-8 grid grid-cols-2 gap-4">
+      <div className="py-8 grid md:grid-cols-2 gap-4">
         {works.map((work) => {
           return (
             <div
               key={work.title}
-              className="rounded-lg bg-sky-300/20 shadow-lg hover:shadow-inner transition-all duration-200 cursor-pointer hover:-translate-y-1"
+              className="rounded-lg bg-sky-300/20 shadow-lg hover:shadow-inner transition-all duration-200 cursor-pointer hover:opacity-80"
             >
               <Image
                 src={work.imageUrl}

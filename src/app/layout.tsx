@@ -42,7 +42,20 @@ const josefinSans = Josefin_Sans({
 
 export const metadata: Metadata = {
   title: "suyasuyaTY.minna",
-  description: "向いてないないなら書き変えてしまえよ",
+  description: "暖色コーダーになるのが夢です",
+  openGraph: {
+    title: "suyasuyaTY.minna",
+    description: "暖色コーダーになるのが夢です",
+    url: "https://suyasuyaty.vercel.app/",
+    images: [
+      {
+        url: "https://suyasuyaty.vercel.app/works/portfolio.webp",
+        width: 1200,
+        height: 630,
+        alt: "suyasuyaTY portfolio preview",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

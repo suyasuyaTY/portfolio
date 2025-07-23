@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, AnimatePresence, Variants } from "motion/react";
 import { tv } from "tailwind-variants";
 import { useTransitionContext } from "../PageTrainsition/TransitionContext";
+import { usePathname } from "next/navigation";
 
 const hamburgerMenu = tv({
   slots: {
@@ -34,16 +35,10 @@ const items: { title: string; href: string; disabled?: boolean }[] = [
   {
     title: "Articles",
     href: "/articles",
-    disabled: true,
   },
   {
     title: "Photo",
     href: "/photo",
-    disabled: true,
-  },
-  {
-    title: "Links",
-    href: "/links",
     disabled: true,
   },
 ];
@@ -83,8 +78,15 @@ const itemVariants: Variants = {
 export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
   const { first, second, third } = hamburgerMenu({ open: isMenuOpen });
   const { playTransition } = useTransitionContext();
+  const pathname = usePathname();
+
   const handleNavigate = (href: string) => {
-    playTransition(href);
+    if (href === pathname) {
+      console.log(pathname);
+      setIsMenuOpen(false);
+    } else {
+      playTransition(href);
+    }
   };
 
   return (
@@ -112,7 +114,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
             exit="closed"
           >
             <motion.ul
-              className="flex flex-row gap-6 justify-around items-center h-screen"
+              className="flex flex-col md:flex-row gap-6 justify-around items-center h-screen py-56"
               variants={listVariants}
             >
               {items.map((item) => (
@@ -123,8 +125,11 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
                     </span>
                   ) : (
                     <motion.a
-                      className="inline-block text-black text-3xl cursor-pointer font-josefin"
-                      whileHover={{ scale: 1.2, color: "#1e3a8a" }}
+                      className="inline-block text-white text-3xl cursor-pointer font-josefin"
+                      whileHover={{
+                        scale: 1.2,
+                        color: "oklch(86.5% 0.127 207.078)",
+                      }}
                       onClick={() => handleNavigate(item.href)}
                     >
                       {item.title}

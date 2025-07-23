@@ -32,7 +32,7 @@ export default function About() {
           <MdMusicNote />
           好きな曲
         </h3>
-        <div className="my-2 grid md:grid-cols-3 gap-4">
+        <div className="my-2 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {songs.map((song) => (
             <a
               key={song.youtubeUrl}

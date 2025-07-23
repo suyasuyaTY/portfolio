@@ -1,7 +1,6 @@
 import { tv } from "tailwind-variants";
-import { CareerCategory } from "../const/career";
 
-export const careerCheckboxVariants = tv({
+export const articleCheckboxVariants = tv({
   slots: {
     button:
       "relative cursor-pointer rounded-sm shadow-2xl pl-6 py-0.5 pr-2 text-sm transition-colors duration-200 bg-[--background] text-[--foreground]",
@@ -9,9 +8,9 @@ export const careerCheckboxVariants = tv({
   },
   variants: {
     category: {
-      intern: {},
-      activity: {},
-      achievement: {},
+      tech: {},
+      note: {},
+      blog: {},
     },
     isChecked: {
       true: {},
@@ -19,9 +18,9 @@ export const careerCheckboxVariants = tv({
     },
   },
   compoundVariants: [
-    // --- インターン ---
+    // --- Tech ---
     {
-      category: "intern",
+      category: "tech",
       isChecked: true,
       class: {
         button: "bg-base-1 shadow-md shadow-base-1 text-white",
@@ -29,16 +28,16 @@ export const careerCheckboxVariants = tv({
       },
     },
     {
-      category: "intern",
+      category: "tech",
       isChecked: false,
       class: {
         button: "group text-base-1 bg-white hover:bg-base-1-light",
         dot: "bg-white group-hover:bg-base-1",
       },
     },
-    // --- 活動 ---
+    // --- note ---
     {
-      category: "activity",
+      category: "note",
       isChecked: true,
       class: {
         button: "bg-base-2 shadow-md shadow-base-2 text-white",
@@ -46,16 +45,16 @@ export const careerCheckboxVariants = tv({
       },
     },
     {
-      category: "activity",
+      category: "note",
       isChecked: false,
       class: {
         button: "group text-base-2 bg-white hover:bg-base-2-light",
         dot: "bg-white group-hover:bg-base-2",
       },
     },
-    // --- 実績 ---
+    // --- blog ---
     {
-      category: "achievement",
+      category: "blog",
       isChecked: true,
       class: {
         button: "bg-base-3 shadow-md shadow-base-3 text-white",
@@ -63,7 +62,7 @@ export const careerCheckboxVariants = tv({
       },
     },
     {
-      category: "achievement",
+      category: "blog",
       isChecked: false,
       class: {
         button: "group text-base-3 bg-white hover:bg-base-3-light",
@@ -73,35 +72,5 @@ export const careerCheckboxVariants = tv({
   ],
   defaultVariants: {
     isChecked: false,
-  },
-});
-
-export const timelineItemVariants = tv({
-  slots: {
-    container: "relative group border-l-1 px-8 pb-6",
-    icon: "absolute w-2 h-2 rounded-full -left-1 top-2 border-1 transition-all duration-300 group-hover:scale-150 group-hover:bg-white",
-    time: "text-xs font-light text-gray-100",
-  },
-  variants: {
-    category: {
-      intern: {
-        container: "border-base-1",
-        icon: "bg-base-1 border-base-1",
-        time: "text-base-1",
-      },
-      activity: {
-        container: "border-base-2",
-        icon: "bg-base-2 border-base-2",
-        time: "text-base-2",
-      },
-      achievement: {
-        container: "border-base-3",
-        icon: "bg-base-3 border-base-3",
-        time: "text-base-3",
-      },
-    } as Record<
-      CareerCategory,
-      { container: string; icon: string; time: string }
-    >,
   },
 });
